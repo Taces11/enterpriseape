@@ -32,17 +32,17 @@ group :doc do
 #gem 'sdoc', '~> 0.4.0'   
     
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'sprockets-rails', '~> 2.1.3'
 
-gem 'autoprefixer-rails'
 end
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'autoprefixer-rails'
 # Use unicorn as the app server
 # gem 'unicorn'
-gem 'sprockets-rails', '~> 2.1.3'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
