@@ -9,7 +9,7 @@ Powerful Software
 Feel  free to access [my portfolio]
 
 
-> ## utilize markdown syntax to create and customize a readme file for Github. ##<
+> ## utilize markdown syntax to create and customize a readme file for Github.
 >
 >
 > the next word is *ITALIC*
