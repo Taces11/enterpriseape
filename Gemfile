@@ -42,7 +42,9 @@ gem 'autoprefixer-rails'
 gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+group :development do
+  gem 'rails_layout'
+end
 # Use unicorn as the app server
 # gem 'unicorn'
 gem 'sprockets-rails', '~> 2.1.3'
@@ -54,3 +56,5 @@ gem 'sprockets-rails', '~> 2.1.3'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+gem 'devise'
