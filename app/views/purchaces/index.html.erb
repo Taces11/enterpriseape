@@ -1,31 +1,34 @@
 <h1>Listing purchaces</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Catagory</th>
-      <th>Quantity</th>
-      <th>Invoice</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @purchaces.each do |purchace| %>
-      <tr>
-        <td><%= purchace.name %></td>
-        <td><%= purchace.catagory %></td>
-        <td><%= purchace.quantity %></td>
-        <td><%= purchace.invoice %></td>
-        <td><%= link_to 'Show', purchace %></td>
-        <td><%= link_to 'Edit', edit_purchace_path(purchace) %></td>
-        <td><%= link_to 'Destroy', purchace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div class="media">
+	<div class="media-body">
+		<table class="table table-hover">
+		  <thead>
+		    <tr>
+		      <th>Name</th>
+		      <th>Catagory</th>
+		      <th>Quantity</th>
+		      <th>Invoice</th>
+		      <th colspan="3"></th>
+		    </tr>
+		  </thead>
+		
+		  <tbody>
+		    <% @purchaces.each do |purchace| %>
+		      <tr>
+		        <td><%= purchace.name %></td>
+		        <td><%= purchace.category %></td>
+		        <td><%= purchace.quantity %></td>
+		        <td><%= purchace.invoice %></td>
+		        <td><%= link_to 'Show', purchace, class: 'btn btn-mini' %></td>
+		        <td><%= link_to 'Edit', edit_purchace_path(purchace), class: 'btn btn-mini btn-success' %></td>
+		        <td><%= link_to 'Destroy', purchace, method: :delete, class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+    </div>
+</div>
 <br>
 
 <%= link_to 'New Purchace', new_purchace_path %>
