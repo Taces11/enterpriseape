@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @purchace.name %>
+</p>
+
+<p>
+  <strong>Catagory:</strong>
+  <%= @purchace.catagory %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @purchace.quantity %>
+</p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @purchace.invoice %>
+</p>
+
+<%= link_to 'Edit', edit_purchace_path(@purchace) %> |
+<%= link_to 'Back', purchaces_path %>
