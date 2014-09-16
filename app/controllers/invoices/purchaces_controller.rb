@@ -1,5 +1,4 @@
-class PurchacesController < ApplicationController
-  before_action :set_purchace, only: [:show, :edit, :update, :destroy]
+class Invoices::PurchacesController < ApplicationController
 
   # GET /purchaces
   # GET /purchaces.json
