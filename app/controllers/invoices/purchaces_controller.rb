@@ -13,6 +13,7 @@ class Invoices::PurchacesController < ApplicationController
 
   # GET /purchaces/new
   def new
+    @invoice = Invoice.find(params[:invoice_id])
     @purchace = Purchace.new
   end
 
@@ -23,15 +24,17 @@ class Invoices::PurchacesController < ApplicationController
   # POST /purchaces
   # POST /purchaces.json
   def create
+    @invoice = Invoice.find(params[:invoice_id])
     @purchace = Purchace.new(purchace_params)
+    @purchace.invoice = @invoice
 
     respond_to do |format|
       if @purchace.save
-        format.html { redirect_to @purchace, notice: 'Purchace was successfully created.' }
-        format.json { render :show, status: :created, location: @purchace }
+        format.html { redirect_to @invoice, notice: 'Purchace was successfully created.' }
+        format.json { render :show, status: :created, location: @invoice }
       else
         format.html { render :new }
-        format.json { render json: @purchace.errors, status: :unprocessable_entity }
+        format.json { render json: @invoice.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,7 +45,7 @@ class Invoices::PurchacesController < ApplicationController
     respond_to do |format|
       if @purchace.update(purchace_params)
         format.html { redirect_to @purchace, notice: 'Purchace was successfully updated.' }
-        format.json { render :show, status: :ok, location: @purchace }
+        format.json { render :show, status: :ok, location: @invoice }
       else
         format.html { render :edit }
         format.json { render json: @purchace.errors, status: :unprocessable_entity }
