@@ -49,7 +49,7 @@ end
 gem 'sprockets-rails', '~> 2.1.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'bootstrap-sass-extras'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
