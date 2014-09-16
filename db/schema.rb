@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140915153636) do
+ActiveRecord::Schema.define(version: 20140916164913) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140915153636) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "category"
+    t.decimal  "price"
   end
 
   add_index "purchaces", ["invoice_id"], name: "index_purchaces_on_invoice_id"
